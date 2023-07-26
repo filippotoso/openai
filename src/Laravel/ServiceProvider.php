@@ -23,7 +23,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->app->singleton(OpenAI::class, function () {
             $options = new Options([
                 'apiKey' => config('services.openai.api_key'),
-                'oprganizationId' => config('services.openai.oprganization_id'),
+                'organizationId' => config('services.openai.organization_id'),
             ]);
 
             return new OpenAI($options);
